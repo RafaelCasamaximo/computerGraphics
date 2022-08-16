@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project(main)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
+find_package( OpenCV REQUIRED )
+find_package( Matplot++ REQUIRED )
+add_executable( main main.cpp )
+target_link_libraries( main PUBLIC ${OpenCV_LIBS}  Matplot++::matplot )
