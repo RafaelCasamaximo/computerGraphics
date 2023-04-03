@@ -21,6 +21,6 @@ set(sources
 )
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
-find_package( OpenCV REQUIRED )
+# find_package( OpenCV REQUIRED )
 add_executable( main main.cpp ${sources} )
-target_link_libraries( main ${OpenCV_LIBS} ${SDL2_LIBRARIES} )
+target_link_libraries( main ${SDL2_LIBRARIES} )
